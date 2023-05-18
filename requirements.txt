@@ -1,0 +1,7 @@
+streamlit
+streamlit_chat
+python-dotenv
+langchain
+streamlit_extras
+openai
+chromadb

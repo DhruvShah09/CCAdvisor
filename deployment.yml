@@ -1,0 +1,33 @@
+api-version: 2019-12-01
+location: eastus
+name: advisor
+properties:
+  containers:
+  - name: streamlitapp
+    properties:
+      image: chatreg.azurecr.io/advisor:latest
+      ports:
+      - port: 80
+        protocol: TCP
+      - port: 443
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 2.0
+          memoryInGB: 1.5
+  imageRegistryCredentials:
+  - server: chatreg.azurecr.io
+    username: chatreg
+    password: ofW4+ure37T/MFdn4PlgLhgB0loG1BbKZOP1tD3myn+ACRALp9IT
+  restartPolicy: Never
+  ipAddress:
+    ports:
+    - port: 443
+      protocol: TCP
+    - port: 80
+      protocol: TCP
+    type: Public
+    dnsNameLabel: ccadvisorbot
+  osType: Linux
+tags: null
+type: Microsoft.ContainerInstance/containerGroups

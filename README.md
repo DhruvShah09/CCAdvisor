@@ -10,4 +10,4 @@ At this point, there are two ways to run the application. Locally the applicatio
 ```
 streamlit run main.py
 ```
-Alternatively, if you wish to deploy the application, there is a Dockerfile provided, along with NGINX conf files to route traffic to the correct port, however this is implementation specific and you may change it as per your needs. 
+Alternatively, if you wish to deploy the application, there is a Dockerfile provided, along with NGINX conf files to route traffic to the correct port, however this is implementation specific and you may change it as per your needs. However, this requires moving all the non deployment relevant files into a seperate subdirectory titled `/project-contents` after which building the dockerfile renders an image capable of running on a containerized app deployment.
